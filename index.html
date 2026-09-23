@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi | Modern & Elegan</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Modern Clean Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration for Soft Light Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        bgSoft: '#FAF9F6',     /* Cream/Off-white santai */
+                        cardBg: '#FFFFFF',     /* Putih murni untuk kartu */
+                        textPrimary: '#1E293B',/* Slate gelap elegan */
+                        textMuted: '#64748B',  /* Abu-abu lembut */
+                        accent: '#475569',     /* Aksentuasi Slate */
+                        accentLight: '#F1F5F9',/* Highlight terang */
+                        brand: '#2563EB'       /* Biru lembut untuk aksen aktif */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bgSoft text-textPrimary font-sans antialiased selection:bg-brand selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-bgSoft/80 backdrop-blur-md border-b border-slate-200/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-textPrimary hover:opacity-80 transition">
+                NamaAnda<span class="text-brand">.</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-textMuted">
+                <a href="#about" class="hover:text-textPrimary transition">Tentang</a>
+                <a href="#projects" class="hover:text-textPrimary transition">Proyek</a>
+                <a href="#skills" class="hover:text-textPrimary transition">Keahlian</a>
+                <a href="#contact" class="hover:text-textPrimary transition">Kontak</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium bg-textPrimary text-white hover:bg-slate-700 transition shadow-sm hover:shadow">
+                Hubungi Saya
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden p-2 text-textPrimary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-slate-200 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-base font-medium text-textMuted hover:text-textPrimary mobile-link">Tentang</a>
+            <a href="#projects" class="block text-base font-medium text-textMuted hover:text-textPrimary mobile-link">Proyek</a>
+            <a href="#skills" class="block text-base font-medium text-textMuted hover:text-textPrimary mobile-link">Keahlian</a>
+            <a href="#contact" class="block text-base font-medium text-textMuted hover:text-textPrimary mobile-link">Kontak</a>
+            <a href="#contact" class="inline-block w-full text-center px-5 py-3 rounded-full text-sm font-medium bg-textPrimary text-white">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="pt-36 pb-20 md:pt-48 md:pb-32 max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/80 text-xs font-semibold text-textMuted mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Tersedia untuk Proyek Baru & Pekerjaan
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-textPrimary leading-[1.15] mb-6">
+                Merancang & Membangun Pengalaman Digital yang <span class="text-slate-500 italic font-normal">Sederhana</span> & Bermakna.
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-textMuted leading-relaxed mb-10 font-normal">
+                Halo, saya <strong class="text-textPrimary font-semibold">Nama Anda</strong> — seorang Digital Creator & Web Developer. Berfokus pada pembuatan antarmuka web yang bersih, cepat, dan mudah digunakan.
+            </p>
+
+            <div class="flex flex-wrap gap-4 items-center">
+                <a href="#projects" class="px-7 py-3.5 rounded-full bg-textPrimary text-white font-medium text-sm hover:bg-slate-800 transition shadow-sm hover:shadow-md">
+                    Lihat Portofolio
+                </a>
+                <a href="#contact" class="px-7 py-3.5 rounded-full bg-cardBg border border-slate-300 text-textPrimary font-medium text-sm hover:bg-slate-50 transition">
+                    Diskusi Proyek
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS / HIGHLIGHTS -->
+    <section class="border-y border-slate-200/80 bg-white/50 py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <h3 class="text-3xl font-extrabold text-textPrimary">3+</h3>
+                <p class="text-xs sm:text-sm text-textMuted mt-1">Tahun Pengalaman</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-extrabold text-textPrimary">20+</h3>
+                <p class="text-xs sm:text-sm text-textMuted mt-1">Proyek Selesai</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-extrabold text-textPrimary">99%</h3>
+                <p class="text-xs sm:text-sm text-textMuted mt-1">Kepuasan Klien</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-extrabold text-textPrimary">100%</h3>
+                <p class="text-xs sm:text-sm text-textMuted mt-1">Komitmen Kualitas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand mb-2">Karya Terpilih</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-textPrimary tracking-tight">Proyek Terbaru</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="filter-container">
+                <button class="filter-btn active-filter px-4 py-2 rounded-full text-xs font-semibold bg-textPrimary text-white transition" data-filter="all">Semua</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-cardBg border border-slate-200 text-textMuted hover:text-textPrimary hover:bg-slate-50 transition" data-filter="web">Web App</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-cardBg border border-slate-200 text-textMuted hover:text-textPrimary hover:bg-slate-50 transition" data-filter="uiux">UI/UX Design</button>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Project Card 1 -->
+            <div class="project-card group bg-cardBg border border-slate-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" data-category="web">
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Sistem Kasir Cloud" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-slate-100 text-textMuted rounded-md">Web App</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-slate-100 text-textMuted rounded-md">Tailwind</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-textPrimary group-hover:text-brand transition mb-2">Aplikasi Manajemen Finansial</h3>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">Dashboard keuangan modern berkecepatan tinggi dengan integrasi grafik analitik real-time.</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-sm font-semibold text-textPrimary group-hover:translate-x-1 transition gap-1">
+                        Lihat Detail Proyek
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card group bg-cardBg border border-slate-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" data-category="uiux">
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Redesain E-commerce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-slate-100 text-textMuted rounded-md">UI/UX Design</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-slate-100 text-textMuted rounded-md">Figma</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-textPrimary group-hover:text-brand transition mb-2">Redesain Minimalis E-Commerce</h3>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">Penyederhanaan alur checkout yang meningkatkan tingkat konversi pengguna sebesar 25%.</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-sm font-semibold text-textPrimary group-hover:translate-x-1 transition gap-1">
+                        Lihat Detail Proyek
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 bg-white/60 border-y border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand mb-2">Keahlian & Tools</h2>
+                <p class="text-3xl font-bold text-textPrimary tracking-tight">Teknologi yang Digunakan</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <div class="p-5 bg-cardBg border border-slate-200/80 rounded-xl text-center hover:border-slate-400 transition">
+                    <p class="font-bold text-textPrimary text-sm">HTML5 / CSS3</p>
+                    <p class="text-xs text-textMuted mt-1">Struktur & Styling</p>
+                </div>
+                <div class="p-5 bg-cardBg border border-slate-200/80 rounded-xl text-center hover:border-slate-400 transition">
+                    <p class="font-bold text-textPrimary text-sm">JavaScript</p>
+                    <p class="text-xs text-textMuted mt-1">Interaktivitas</p>
+                </div>
+                <div class="p-5 bg-cardBg border border-slate-200/80 rounded-xl text-center hover:border-slate-400 transition">
+                    <p class="font-bold text-textPrimary text-sm">Tailwind CSS</p>
+                    <p class="text-xs text-textMuted mt-1">Utility-First UI</p>
+                </div>
+                <div class="p-5 bg-cardBg border border-slate-200/80 rounded-xl text-center hover:border-slate-400 transition">
+                    <p class="font-bold text-textPrimary text-sm">React / Next.js</p>
+                    <p class="text-xs text-textMuted mt-1">Frontend Framework</p>
+                </div>
+                <div class="p-5 bg-cardBg border border-slate-200/80 rounded-xl text-center hover:border-slate-400 transition">
+                    <p class="font-bold text-textPrimary text-sm">Figma</p>
+                    <p class="text-xs text-textMuted mt-1">UI/UX Design</p>
+                </div>
+                <div class="p-5 bg-cardBg border border-slate-200/80 rounded-xl text-center hover:border-slate-400 transition">
+                    <p class="font-bold text-textPrimary text-sm">Git & GitHub</p>
+                    <p class="text-xs text-textMuted mt-1">Version Control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-8 sm:p-14 shadow-sm grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-xs uppercase tracking-widest font-bold text-brand mb-2">Kontak</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-textPrimary tracking-tight mb-4">Mari Bekerja Sama!</h3>
+                <p class="text-textMuted leading-relaxed mb-8">
+                    Punya ide proyek menarik atau ingin berdiskusi? Jangan ragu untuk mengirim pesan. Saya akan membalas secepatnya.
+                </p>
+
+                <div class="space-y-4 text-sm font-medium">
+                    <div class="flex items-center gap-3 text-textPrimary">
+                        <span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✉️</span>
+                        <span>email@domainanda.com</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-textPrimary">
+                        <span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">📍</span>
+                        <span>Jakarta, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Interactive Form -->
+            <form id="contact-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Nama Anda</label>
+                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-textPrimary focus:outline-none focus:border-textPrimary transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Email</label>
+                    <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-textPrimary focus:outline-none focus:border-textPrimary transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Pesan</label>
+                    <textarea rows="4" required placeholder="Ceritakan tentang proyek Anda..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-textPrimary focus:outline-none focus:border-textPrimary transition"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-textPrimary text-white font-semibold text-sm hover:bg-slate-800 transition">
+                    Kirim Pesan
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-200/80 text-center text-xs text-textMuted">
+        <p>© 2026 Nama Anda. Dibuat dengan desain bersih dan sederhana.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Project Category Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active styling from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-textPrimary', 'text-white');
+                    b.classList.add('bg-cardBg', 'text-textMuted');
+                });
+
+                // Set active style for clicked button
+                btn.classList.add('bg-textPrimary', 'text-white');
+                btn.classList.remove('bg-cardBg', 'text-textMuted');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 3. Contact Form Submission Alert
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Pesan Anda berhasil dikirim! Terima kasih telah menghubungi saya.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+  </html>
+  
